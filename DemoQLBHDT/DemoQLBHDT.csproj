@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{235D777C-371B-42F8-8EDA-EA88EE8A0F24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DemoQLBHDT</RootNamespace>
+    <AssemblyName>DemoQLBHDT</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ConnectDataBase.cs" />
+    <Compile Include="DAO\Sql_AutoID.cs" />
+    <Compile Include="DAO\Sql_CaLam.cs" />
+    <Compile Include="DAO\Sql_ChiTietHDB.cs" />
+    <Compile Include="DAO\Sql_CongViec.cs" />
+    <Compile Include="DAO\Sql_CTDonDH.cs" />
+    <Compile Include="DAO\Sql_CTDonDHNCC.cs" />
+    <Compile Include="DAO\Sql_CTHDN.cs" />
+    <Compile Include="DAO\Sql_DonDH.cs" />
+    <Compile Include="DAO\Sql_DonDHNCC.cs" />
+    <Compile Include="DAO\Sql_DonViTinh.cs" />
+    <Compile Include="DAO\Sql_HangHoa.cs" />
+    <Compile Include="DAO\Sql_HDN.cs" />
+    <Compile Include="DAO\Sql_HoaDonBan.cs" />
+    <Compile Include="DAO\Sql_KhachHang.cs" />
+    <Compile Include="DAO\Sql_NhaCC.cs" />
+    <Compile Include="DAO\Sql_NhanVien.cs" />
+    <Compile Include="DAO\Sql_NhomHang.cs" />
+    <Compile Include="DAO\Sql_NuocSX.cs" />
+    <Compile Include="DAO\Sql_ThongKe.cs" />
+    <Compile Include="DAO\Sql_User.cs" />
+    <Compile Include="DTO\Component\C_AutoID.cs" />
+    <Compile Include="DTO\Component\C_CaLam.cs" />
+    <Compile Include="DTO\Component\C_ChiTietHDB.cs" />
+    <Compile Include="DTO\Component\C_CongViec.cs" />
+    <Compile Include="DTO\Component\C_CTDonDH.cs" />
+    <Compile Include="DTO\Component\C_CTDonDHNCC.cs" />
+    <Compile Include="DTO\Component\C_CTHDN.cs" />
+    <Compile Include="DTO\Component\C_DonDH.cs" />
+    <Compile Include="DTO\Component\C_DonDHNCC.cs" />
+    <Compile Include="DTO\Component\C_DonViTinh.cs" />
+    <Compile Include="DTO\Component\C_HangHoa.cs" />
+    <Compile Include="DTO\Component\C_HDN.cs" />
+    <Compile Include="DTO\Component\C_HoaDonBan.cs" />
+    <Compile Include="DTO\Component\C_KhachHang.cs" />
+    <Compile Include="DTO\Component\C_NhaCC.cs" />
+    <Compile Include="DTO\Component\C_NhanVien.cs" />
+    <Compile Include="DTO\Component\C_NhomHang.cs" />
+    <Compile Include="DTO\Component\C_NuocSX.cs" />
+    <Compile Include="DTO\Component\C_ThongKe.cs" />
+    <Compile Include="DTO\Component\C_User.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_AutoID.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_CaLam.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_ChiTietHDB.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_CongViec.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_CTDonDH.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_CTDonDHNCC.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_CTHDN.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_DonDH.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_DonDHNCC.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_DonViTinh.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_HDN.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_HoaDonBan.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_KhachHang.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_NhanVien.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_NhomHang.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_NuocSX.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_NhaCC.cs" />
+    <Compile Include="Form\FCTDonDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCTDonDH.Designer.cs">
+      <DependentUpon>FCTDonDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDatHang.Designer.cs">
+      <DependentUpon>FDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDonDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDonDH.Designer.cs">
+      <DependentUpon>FDonDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCTHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCTHDN.Designer.cs">
+      <DependentUpon>FCTHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FHDN.Designer.cs">
+      <DependentUpon>FHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FNhapHang.Designer.cs">
+      <DependentUpon>FNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCTDonDHNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCTDonDHNCC.Designer.cs">
+      <DependentUpon>FCTDonDHNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDatHangNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDatHangNCC.Designer.cs">
+      <DependentUpon>FDatHangNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDonDHNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDonDHNCC.Designer.cs">
+      <DependentUpon>FDonDHNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeHDB.Designer.cs">
+      <DependentUpon>FChangeHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeTaiKhoan.Designer.cs">
+      <DependentUpon>FChangeTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FBanHang.Designer.cs">
+      <DependentUpon>FBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FHoaDonBan.Designer.cs">
+      <DependentUpon>FHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeNhaCC.Designer.cs">
+      <DependentUpon>FChangeNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FNhaCC.Designer.cs">
+      <DependentUpon>FNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeKhachHang.Designer.cs">
+      <DependentUpon>FChangeKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FKhachHang.Designer.cs">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeNhanVien.Designer.cs">
+      <DependentUpon>FChangeNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FNhanVien.Designer.cs">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeCaLam.Designer.cs">
+      <DependentUpon>FChangeCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCaLam.Designer.cs">
+      <DependentUpon>FCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeCongViec.Designer.cs">
+      <DependentUpon>FChangeCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCongViec.Designer.cs">
+      <DependentUpon>FCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeNuocSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeNuocSX.Designer.cs">
+      <DependentUpon>FChangeNuocSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FNuocSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FNuocSX.Designer.cs">
+      <DependentUpon>FNuocSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeDonViTinh.Designer.cs">
+      <DependentUpon>FChangeDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDonViTinh.Designer.cs">
+      <DependentUpon>FDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeNhomHang.Designer.cs">
+      <DependentUpon>FChangeNhomHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FNhomHang.Designer.cs">
+      <DependentUpon>FNhomHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangeHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangeHangHoa.Designer.cs">
+      <DependentUpon>FChangeHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\EntitiesClass\EC_HangHoa.cs" />
+    <Compile Include="DTO\EntitiesClass\EC_User.cs" />
+    <Compile Include="Form\FHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FHangHoa.Designer.cs">
+      <DependentUpon>FHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTaiKhoan.Designer.cs">
+      <DependentUpon>FTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKDoanhThuTheoThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKDoanhThuTheoThang.Designer.cs">
+      <DependentUpon>FTKDoanhThuTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKGTTBHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKGTTBHDB.Designer.cs">
+      <DependentUpon>FTKGTTBHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKKHMuaHDGTNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKKHMuaHDGTNhat.Designer.cs">
+      <DependentUpon>FTKKHMuaHDGTNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKKHTiemNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKKHTiemNang.Designer.cs">
+      <DependentUpon>FTKKHTiemNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKNVLapNhieuHDNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKNVLapNhieuHDNhat.Designer.cs">
+      <DependentUpon>FTKNVLapNhieuHDNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FTKSPBanChayNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FTKSPBanChayNhat.Designer.cs">
+      <DependentUpon>FTKSPBanChayNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\FCTDonDH.resx">
+      <DependentUpon>FCTDonDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDatHang.resx">
+      <DependentUpon>FDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDonDH.resx">
+      <DependentUpon>FDonDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCTHDN.resx">
+      <DependentUpon>FCTHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FHDN.resx">
+      <DependentUpon>FHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FNhapHang.resx">
+      <DependentUpon>FNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCTDonDHNCC.resx">
+      <DependentUpon>FCTDonDHNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDatHangNCC.resx">
+      <DependentUpon>FDatHangNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDonDHNCC.resx">
+      <DependentUpon>FDonDHNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeHDB.resx">
+      <DependentUpon>FChangeHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeTaiKhoan.resx">
+      <DependentUpon>FChangeTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FBanHang.resx">
+      <DependentUpon>FBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FHoaDonBan.resx">
+      <DependentUpon>FHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeNhaCC.resx">
+      <DependentUpon>FChangeNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FNhaCC.resx">
+      <DependentUpon>FNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeKhachHang.resx">
+      <DependentUpon>FChangeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FKhachHang.resx">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeNhanVien.resx">
+      <DependentUpon>FChangeNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FNhanVien.resx">
+      <DependentUpon>FNhanVien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeCaLam.resx">
+      <DependentUpon>FChangeCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCaLam.resx">
+      <DependentUpon>FCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeCongViec.resx">
+      <DependentUpon>FChangeCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCongViec.resx">
+      <DependentUpon>FCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeNuocSX.resx">
+      <DependentUpon>FChangeNuocSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FNuocSX.resx">
+      <DependentUpon>FNuocSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeDonViTinh.resx">
+      <DependentUpon>FChangeDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDonViTinh.resx">
+      <DependentUpon>FDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeNhomHang.resx">
+      <DependentUpon>FChangeNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FNhomHang.resx">
+      <DependentUpon>FNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangeHangHoa.resx">
+      <DependentUpon>FChangeHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FHangHoa.resx">
+      <DependentUpon>FHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTaiKhoan.resx">
+      <DependentUpon>FTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKDoanhThuTheoThang.resx">
+      <DependentUpon>FTKDoanhThuTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKGTTBHDB.resx">
+      <DependentUpon>FTKGTTBHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKKHMuaHDGTNhat.resx">
+      <DependentUpon>FTKKHMuaHDGTNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKKHTiemNang.resx">
+      <DependentUpon>FTKKHTiemNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKNVLapNhieuHDNhat.resx">
+      <DependentUpon>FTKNVLapNhieuHDNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FTKSPBanChayNhat.resx">
+      <DependentUpon>FTKSPBanChayNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resource\1Them.png" />
+    <Content Include="Resource\2Sua.png" />
+    <Content Include="Resource\3Xoa.png" />
+    <Content Include="Resource\agt_update_product.png" />
+    <Content Include="Resource\customers.png" />
+    <Content Include="Resource\diagram_v2_02 %281%29.png" />
+    <Content Include="Resource\dt.png" />
+    <Content Include="Resource\excel.png" />
+    <Content Include="Resource\find %281%29.png" />
+    <Content Include="Resource\gnome_preferences_system.png" />
+    <Content Include="Resource\Hinh.png" />
+    <Content Include="Resource\invoice %281%29.png" />
+    <Content Include="Resource\invoice.png" />
+    <Content Include="Resource\lg.png" />
+    <Content Include="Resource\lorrygreen.png" />
+    <Content Include="Resource\Luu.png" />
+    <Content Include="Resource\shopping_cart.png" />
+    <Content Include="Resource\sort_ascend.png" />
+    <Content Include="Resource\undo %283%29.png" />
+    <Content Include="Resource\user_group.png" />
+    <Content Include="Resource\XoaH.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
